@@ -1,0 +1,98 @@
+/******** Fuentes ********/
+#import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+ul li a{
+    font-size: 18px
+}
+
+.navbar-brand{
+    font-size: 15px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    background: rgb(254, 154, 1);
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px 15px;
+}
+
+nav .logo{
+    padding-right: 10px;
+}
+
+nav ol{
+    display: flex ;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ol li{
+    margin: 0 2px;
+}
+
+nav ol li a{
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+nav .search_box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+nav .search_box input{
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+
+nav .search_box span{
+    color: rgb(254, 154, 1);
+    font-size: 20px;
+    background: #fff;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .search_box span:hover{
+    color: #fff;
+}
+
+nav .search_box span::after{
+    height: 100%;
+    width: 0%;
+    content: '';
+    background:  rgb(194, 0, 0);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+nav .search_box span:hover::after{
+    width: 100%;
+}
