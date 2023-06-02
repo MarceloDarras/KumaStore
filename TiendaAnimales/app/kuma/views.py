@@ -4,3 +4,6 @@ from django.shortcuts import render
 
 def cargarInicio(request):
     return render(request, "inicio.html")
+    
+def cargarSesion(request):
+   return render(request,"iniciosesion.html")

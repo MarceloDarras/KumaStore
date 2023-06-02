@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro | Kuma!</title>
+	<link rel="stylesheet" type="text/css" href="css/style-registro.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/a81368914c.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<img class="wave" src="img/wave.png">
+	<div class="container">
+		<div class="img">
+		</div>
+		<div class="register-content">
+			<form action="" id="formulario">
+				<h2 class="title">Crear una cuenta</h2>
+
+           		<div class="input-div" id="grupo__correo">
+           		   <div class="i" id="grupo__correo">
+           		   		<i class="fas fa-user"></i>
+           		   </div>
+           		   <div class="" id="grupo__correo">
+           		   		<h5>Correo electrónico</h5>
+							<input type="text" class="input" name="correo" id="correo" placeholder="">
+           		   </div>
+           		</div>
+				   <p class="formulario__input-error" id="correo-error" >El correo solo puede contener letras, números, puntos, guiones y guion bajo.</p>
+
+				   <div class="input-div" id="grupo__nombre">
+					<div class="i" id="grupo__nombre">
+							<i class="fas fa-envelope"></i>
+					</div>
+					<div class="" id="grupo__nombre">
+							<h5>Nombre</h5>
+							<input type="text" class="input" name="nombre" id="nombre" placeholder="">
+					</div>
+				 </div>
+				 <p class="formulario__input-error" id="nombre-error">El nombre solo debe de contener letras.</p>
+
+				 <div class="input-div" id="grupo__apellido">
+					<div class="i" id="grupo__apellido">
+							<i class="fas fa-user"></i>
+					</div>
+					<div class="" id="grupo__apellido">
+							<h5>Apellido</h5>
+							<input type="text" class="input" name="apellido" id="apellido" placeholder="">
+					</div>
+				 </div>
+				 <p class="formulario__input-error" id="apellido-error">El apellido solo debe de contener letras.<p>
+
+           		<div class="input-div pass" id="grupo__password">
+           		   <div class="i" id="grupo__password"> 
+           		    	<i class="fas fa-lock"></i>
+           		   </div>
+           		   <div class="" id="grupo__password">
+           		    	<h5>Contraseña</h5>
+						   <input type="password" class="input" name="password" id="password">
+            	   </div>
+            	</div>
+				<p class="formulario__input-error"  id="password-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+
+				<div class="input-div pass" id="grupo__password2">
+					<div class="i" id="grupo__password2"> 
+						 <i class="fas fa-lock"></i>
+					</div>
+					<div class="" id="grupo__password2">
+						 <h5>Contraseña</h5>
+						 <input type="password" class="input" name="password2" id="password2">
+				 </div>
+			  </div>
+			  <p class="formulario__input-error"  id="password2-error">Las contraseñas deben de coincidir.</p>
+            	<input type="submit" class="btn" value="Registrarse">
+            </form>
+        </div>
+
+    <script type="text/javascript" src="js/registro.js"></script>
+</body>
+</html>

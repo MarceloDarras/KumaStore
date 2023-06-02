@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'CSS/style-reloj.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style-header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
     <script src="https://kit.fontawesome.com/2bddaf117c.js" crossorigin="anonymous"></script>
     <title>Document</title>
     {% block head %}
@@ -68,7 +71,7 @@
     {% endblock %}
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
-
+    <script src="{% static 'JS/funciones-estetica.js' %}"></script>
     {% block script %}
 
     {% endblock %}
@@ -119,7 +122,7 @@
               <form action="#">
                 <input type="text" placeholder="Ingrese su mail">
                 <a class="button" href="registro.html"><span><i class="fa fa-envelope" arial-hidden="true"></i></span></a>
-                <p class="acominicio">¿Ya eres parte de la familia Kuma!? <a class="iniciosesion" href="iniciosesion.html">Inicia sesión</a></p>
+                <p class="acominicio">¿Ya eres parte de la familia Kuma!? <a class="iniciosesion" href="login">Inicia sesión</a></p>
                 <p class="agregar">¡Agrega tus productos! -<a class="iniciosesion" href="agregar_producto.html"> Agregar</a></p>
                 <p class="eliminar">¡Elimina tus productos! -<a class="iniciosesion" href="eliminar_produto.html"> Eliminar<a></p>
               </form>

@@ -2,17 +2,199 @@
 {% load static %}
     
 {% block head %}
-    <link rel="stylesheet" href="{% static 'CSS/style-header.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/style-footer.css' %}">
-    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
-{% endblock %}
-
-
-{% block body %}
     
 {% endblock %}
 
 
+{% block body %}
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+        <div class="carrito">
+            <div class="header-carrito">
+            <h2>Tu carrito</h2>
+            </div>
+            <div class="carrito-items">
+            <!--  
+            <div class="carrito-item">
+                <img src="IMG/plano.jpg" alt="">
+                <div class="carrito-item-detalles">
+                <span class="carrito-item-titulo">Bandana color simple</span>
+                <div class="selector-cantidad">
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">$15.000</span>
+                </div>
+                <span class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+            <div class="carrito-item">
+                <img src="IMG/rec___327.jpg" alt="">
+                <div class="carrito-item-detalles">
+                <span class="carrito-item-titulo">Bandana diseño cuadriculado</span>
+                <div class="selector-cantidad">
+                    <i class="fa-solid fa-minus restar-cantidad"></i>
+                    <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                    <i class="fa-solid fa-plus sumar-cantidad"></i>
+                </div>
+                <span class="carrito-item-precio">$30.000</span>
+                </div>
+                <span class="btn-eliminar">
+                <i class="fa-solid fa-trash"></i>
+                </span>
+            </div>
+            -->
+            </div>
+            <div class="carrito-total">
+            <div class="fila">
+                <strong>Tu total</strong>
+                <span class="carrito-precio-total">
+                $0,00
+                </span>
+            </div>
+            <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <h1>Nuestros productos</h1>
+        <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="//cdn.shopify.com/s/files/1/1741/2603/products/bandanaescocesa_300x.jpg?v=1610573718" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="//cdn.shopify.com/s/files/1/1741/2603/products/Popcorn-Bandana_700x700_9f916bf2-dc2d-43c3-b123-67478d606343_300x.jpg?v=1616697358" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="//cdn.shopify.com/s/files/1/1741/2603/products/acc9b88d-994b-4434-835d-4cb19c4a0888_300x.png?v=1633663177" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <figcaption class="figure-caption"><h3>Bandanas</h3></figcaption>
+              </div>
+              <div class="card-body">
+                <a href="bandanas.html" class="btn btn-danger" role="button">
+                  Ver productos
+                </a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://s3.us-east-1.amazonaws.com/laikapp/images_products/75449128_1_33.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://laikapp.s3.amazonaws.com/dev_images_products/55566_144316_Zeedog___Ella_Air_Mesh_Harness_1647094403_500x500.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://laikapp.s3.amazonaws.com/dev_images_products/80453_197969_Zeedog___Collar_Perro_Hawkins_Stranger_Things_1664915906_800x800.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <figcaption class="figure-caption"><h3>Correas y arneses</h3></figcaption>
+              </div>
+              <div class="card-body">
+                <a href="correas.html" class="btn btn-danger" role="button">
+                  Ver productos
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://laikapp.s3.amazonaws.com/dev_images_products/73997_Sunipet___ZeroBugs____PET_Antipulgas_y_garrapatas_1637863924_0_300x300.png" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://laikapp.s3.amazonaws.com/dev_images_products/75243_Tickless___Repelente_ultras__nico_1643747064_0_500x500.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://bestforpets.cl/tienda/10319-large_default/ruffwear-the-beacon™-safety-light.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <figcaption class="figure-caption"><h3>Colgantes</h3></figcaption>
+              </div>
+              <div class="card-body">
+                <a href="identificadores.html" class="btn btn-danger" role="button">
+                  Ver productos
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="https://laikapp.s3.amazonaws.com/images_products/FT59.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://laikapp.s3.amazonaws.com/images_products/847922034429.jpg" class="d-block w-100" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://laikapp.s3.amazonaws.com/dev_images_products/232dd59f246f72e4270349b572a268ea_1674050140.jpg" class="d-block w-100" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+                <figcaption class="figure-caption"><h3>Juguetes</h3></figcaption>
+              </div>
+              <div class="card-body">
+                <a href="juguetes.html" class="btn btn-danger" role="button">
+                  Ver producto
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+{% endblock %}
+
+
 {% block script %}
-    <script src="{% static 'JS/funciones-estetica.js' %}"></script>
+    
 {% endblock %}
