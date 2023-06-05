@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'CSS/style-reloj.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style-header.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style-footer.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/style.css' %}">
+    <script src="https://kit.fontawesome.com/2bddaf117c.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    {% block head %}
+
+    {% endblock %}
+</head>
+<header>
+    <nav class="py-3 navbar navbar-dark bg-caution navbar-expand-md">
+      <div class="container">
+        <div class="icon">
+          <a class="navbar-brand" href="inicio">
+            <img src="{% static 'IMG/logo.png' %}" width="75" height="75" alt=""> Kuma! </a>
+        </div>
+  
+        <div class="d-none d-lg-block">
+          <form class="search_box">
+            <input type="search" placeholder="Buscar">
+            <span class="fa fa-search"></span>
+          </form>
+          </div>
+  
+        <button data-bs-toggle="collapse" data-bs-target="#main-menu" type="button" class="navbar-toggler">
+          <span class="navbar-toggler-icon"></span>  
+        </button>
+        
+        <div class="collapse navbar-collapse" id="main-menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="">Higiene</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Entretención</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Accesorios y vestuarios</a></li>
+            <li class="nav-item"><a class="nav-link" href="">Alimentos</a></li>
+            <li class="nav-item"><button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><span class="fa fa-cart-shopping"></span></button>
+            <li class="nav-item">
+              <button class="switch" id="switch">
+                <span>
+                  <i class="fas fa-sun"></i>
+                </span>
+                <span>
+                  <i class="fas fa-moon"></i>
+                </span>
+              </button>
+            </li>
+              
+          </ul> 
+        </div>
+      </div>
+    </nav>
+    
+      
+  </header>
+<body>
+  <div class="container mt-5">
+    <div class="reloj">
+      <p class="tiempo"></p>
+    </div>
+  </div>
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+    <div class="carrito">
+        <div class="header-carrito">
+        <h2>Tu carrito</h2>
+        </div>
+        <div class="carrito-items">
+        <!--  
+        <div class="carrito-item">
+            <img src="IMG/plano.jpg" alt="">
+            <div class="carrito-item-detalles">
+            <span class="carrito-item-titulo">Bandana color simple</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+            <span class="carrito-item-precio">$15.000</span>
+            </div>
+            <span class="btn-eliminar">
+            <i class="fa-solid fa-trash"></i>
+            </span>
+        </div>
+        <div class="carrito-item">
+            <img src="IMG/rec___327.jpg" alt="">
+            <div class="carrito-item-detalles">
+            <span class="carrito-item-titulo">Bandana diseño cuadriculado</span>
+            <div class="selector-cantidad">
+                <i class="fa-solid fa-minus restar-cantidad"></i>
+                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                <i class="fa-solid fa-plus sumar-cantidad"></i>
+            </div>
+            <span class="carrito-item-precio">$30.000</span>
+            </div>
+            <span class="btn-eliminar">
+            <i class="fa-solid fa-trash"></i>
+            </span>
+        </div>
+        -->
+        </div>
+        <div class="carrito-total">
+        <div class="fila">
+            <strong>Tu total</strong>
+            <span class="carrito-precio-total">
+            $0,00
+            </span>
+        </div>
+        <button class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></button>
+        </div>
+    </div>
+    </div>
+</div>
+    {% block body %}
+
+    {% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+    <script src="{% static 'JS/funciones-estetica.js' %}"></script>
+    <script src="{% static 'JS/funciones_carrito.js' %}"></script>
+    {% block script %}
+
+    {% endblock %}
+</body>
+<footer class="footer">
+    <div class="left-footer">
+      <div class="row">
+  
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="footer-about">
+            <div class="footer-logo">
+              <a href=""><img src="" width="75" height="75" alt=""></a>
+            </div>
+            <p>
+              Kuma!, Nuestra misión es ayudar a nuestros amigos peludos a encontrar el alimento, juguete o accesorio favorito.</p>
+              <a href=""><img src="" alt=""></a>
+            </div>            
+        </div>
+  
+        <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
+          <div class="footer-widget">
+            <h6>Categorias</h6>
+            <ul>
+              <li><a href="">Higiene</a></li>
+              <li><a href="">Entretención</a></li>
+              <li><a href="">Accesorios y vestuarios</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-lg-2 col-md-3 col-sm-6">
+          <div class="footer-widget">
+            <h6>Links</h6>
+            <ul>
+              <li><a href="">Contacta con nosotros</a></li>
+              <li><a href="">Metodos de pago</a></li>
+              <li><a href="">Delivery</a></li>
+              <li><a href="">Reembolsos</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+        <div class="footer-widget">
+            <h6>¿Eres parte de la familia Kuma!?</h6>
+            <div class="footer-newsletter">
+              <p>Se el primero en saber sobre nuevos productos, ofertas y promociones!</p>
+              <form action="#">
+                <input type="text" placeholder="Ingrese su mail">
+                <a class="button" href="registro.html"><span><i class="fa fa-envelope" arial-hidden="true"></i></span></a>
+                <p class="acominicio">¿Ya eres parte de la familia Kuma!? <a class="iniciosesion" href="login">Inicia sesión</a></p>
+                <p class="agregar">¡Agrega tus productos! -<a class="iniciosesion" href="agregar_producto.html"> Agregar</a></p>
+                <p class="eliminar">¡Elimina tus productos! -<a class="iniciosesion" href="eliminar_produto.html"> Eliminar<a></p>
+              </form>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <div class="footer-copyright-text">
+            <p>Copyright &copy; 2023 All rights reserved | Kuma!</p>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+  
+  </footer>
+</html>
